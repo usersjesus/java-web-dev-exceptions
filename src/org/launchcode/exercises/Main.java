@@ -18,14 +18,22 @@ public class Main {
         // Test out your CheckFileExtension() function!
     }
 
-    public static void Divide(int x, int y)
-    {
-        // Write code here!
+    public static double Divide(int x, int y) {
+        double grade = x/y;
+        if (y == 0) {
+            try {
+                throw new ArithmeticException("Value is undefined. 'Y' cannot be 0");
+            } catch (ArithmeticExeption e) {
+                e.printStackTrace();
+            }
+        }
+        return grade;
     }
 
     public static int CheckFileExtension(String fileName)
     {
-        // Write code here!
+      for (String student : studentFiles) {
+          }
     }
 
 }
