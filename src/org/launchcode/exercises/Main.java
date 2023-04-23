@@ -30,10 +30,22 @@ public class Main {
         return grade;
     }
 
-    public static int CheckFileExtension(String fileName)
-    {
-      for (String student : studentFiles) {
-          }
+    public static int CheckFileExtension(String fileName) {
+        int studentPoints = 0;
+        for (String studentFile : fileName) {
+            if (studentFile.value().contains(".java")) {
+              studentPoints += 1;
+            } else if (studentFile.value().equals(null) || student.value().equals("")) {
+//                Does "studentPoints -= 1;" go here??
+                try {
+                    throw new ContentException("Did not provide file!");
+                } catch (ContentException e) {
+                    studentPoints -= 1; // or here??
+                    e.printStackTrace();
+                }
+            }
+        }
+        return studentPoints;
     }
 
 }
